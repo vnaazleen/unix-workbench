@@ -1,7 +1,12 @@
 #!/bin/bash
 
-files_count=$(ls | wc -l)
-echo $files_count
+function get_files_in_current_directory {
+	files_count=$(ls | wc -l)
+}
+
+
+get_files_in_current_directory
+#echo $files_count
 
 echo "How many files are in current directory?"
 echo "Enter your guess: "
@@ -23,6 +28,3 @@ do
 	read guess
 done
 echo "Congratulations! $guess files are in current directory"
-
-
-
